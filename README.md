@@ -25,28 +25,47 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+
+- [x] Detail which bugs you found.
+- [x] Explain what fixes you applied.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 15.
+2. Game returns "Too High"
+3. User enters a guess of 2 and game returns "Too Low"
+4.  User enters a guess of 11 and the game ends.
+5. Press "New Game" to start a new game.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+================================================== test session starts ===================================================
+platform win32 -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\sajja\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sajja\Downloads\Game Glitch Investigation\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 12 items                                                                                                        
+
+tests/test_game_logic.py::test_winning_guess PASSED                                                                 [  8%]
+tests/test_game_logic.py::test_guess_too_high PASSED                                                                [ 16%]
+tests/test_game_logic.py::test_guess_too_low PASSED                                                                 [ 25%]
+tests/test_game_logic.py::test_too_high_message_says_go_lower PASSED                                                [ 33%]
+tests/test_game_logic.py::test_too_low_message_says_go_higher PASSED                                                [ 41%]
+tests/test_game_logic.py::test_guess_compared_as_integer_across_attempts PASSED                                     [ 50%]
+tests/test_game_logic.py::test_easy_range PASSED                                                                    [ 58%]
+tests/test_game_logic.py::test_normal_range PASSED                                                                  [ 66%]
+tests/test_game_logic.py::test_hard_range PASSED                                                                    [ 75%]
+tests/test_game_logic.py::test_parse_valid_guess PASSED                                                             [ 83%]
+tests/test_game_logic.py::test_parse_empty_guess PASSED                                                             [ 91%]
+tests/test_game_logic.py::test_parse_non_numeric_guess PASSED                                                       [100%]
+
+=================================================== 12 passed in 0.10s ===================================================
 ```
 
 ## 🚀 Stretch Features
